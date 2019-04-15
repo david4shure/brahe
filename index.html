@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>brahe - an orbital simulation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <style>
+      body {
+      margin: 0px;
+      background-color: #000000;
+      overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <div class="column">
+        <div id="eccentricity" class="orbital-input">
+          ε=
+          <span id="eccentricity-label">
+          </span>
+          <input style="display:block;width:90%;"type="range" min="0" max="99" value="80" class="slider" id="eccentricity-input"/>
+        </div>
+        <div id="semi-major" class="orbital-input">
+          a =
+          <span id="semi-major-label"/>
+        </div>
+        <div id="mass" class="orbital-input">
+          M⊕ =
+          <span id="mass-label"/>
+        </div>
+        <div id="inclination" class="orbital-input">
+          <span style="font-style:italics;">i</span> =
+          <span id="inclination-label">
+          </span>
+          °
+          <input style="display:block;width:90%;" type="range" min="0" max="360" value="0" class="slider" id="inclination-input"/>
+        </div>
+        <div id="argument-of-periapsis" class="orbital-input">
+          ω =
+          <span id="argument-of-periapsis-label">
+          </span>
+          °
+          <input style="display:block;width:90%;" type="range" min="0" max="360" value="0" class="slider" id="argument-of-periapsis-input"/>
+        </div>
+        <div id="long-of-asc-node" class="orbital-input">
+          Ω =
+          <span id="long-of-asc-node-label">
+          </span>
+          °
+          <input style="display:block;width:90%;" type="range" min="0" max="360" value="0" class="slider" id="long-of-asc-node-input"/>
+        </div>
+      </div>
+      <canvas class="right" id="canvas" style="background-color:blue;"></canvas>
+    </div>
+    <script src="./vendor/three.min.js"></script>
+    <script src="./js/orbit.js"></script>
+    <script src="./js/render.js"></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+.column{
+    display: flex;
+    color: white;
+}
+
+.row {
+    width:100%;
+    text-align:center;
+}
+.orbital-input {
+    width: calc(100% / 6);
+    display: inline-block;
+    vertical-align: top;
+    border:1px solid red;
+    border-radius: 10px;
+    text-align:center;
+    margin:2%;
+    padding:20px;
+}
