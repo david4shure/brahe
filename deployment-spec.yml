@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: brahe
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      run: brahe
+  template:
+    metadata:
+      labels:
+        run: brahe
+    spec:
+      containers:
+      - name: brahe
+        image: registry.lan/brahe:latest
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: registry.lan
