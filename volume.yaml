@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: marian-raid
+spec:
+  capacity:
+    storage: 5000Gi
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    server: marian.lan
+    path: "/media/raid"
